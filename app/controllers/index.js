@@ -12,20 +12,44 @@
 // });
 
 import { computed, observer } from '@ember/object';
+import {empty, match, not} from '@ember/object/computed'
 import Controller from '@ember/controller';
 
 export default Controller.extend({
 
-  isDisabled: true,
-
+  response: '',
   emailAddress: '',
 
-  actualEmailAddress: computed('emailAddress', function() {
-    console.log('actualEmailAddress function is called: ', this.get('emailAddress'));
-  }),
+  // isDisabled: empty('emailAddress'), 
 
-  emailAddressChanged: observer('emailAddress', function() {
-    console.log('observer is called', this.get('emailAddress'));
-  })
+  isValid: match('emailAddress', /^.+@.+\..+$/),
+  isDisabled: not('isValid'), //empty until valid email
+
+  // isDisabled: computed('emailAddress', function(){
+  //   return this.get('emailAdddress') === '';
+  // })
+
+  // isDisabled: computed('emailAddress', function() {
+  //   console.log('actualEmailAddress function is called: ', this.get('emailAddress'));
+  // }), //tracks as well, but not disabled
+
+  // isDisabled: observer('emailAddress', function() {
+  //   console.log('observer is called', this.get('emailAddress'));
+  // }) //changed every type, like in event.target
+
+  actions: {
+
+    saveInvitation(){
+      alert(`Saving : ${this.get('emailAddress')}`);
+      //console.log(`Saved : ${this.get('emailAddress')}`);
+      this.set('responseMessage', `Thanks! Saved your address!: ${this.get('emailAddress')}`);
+      this.set('emailAddress', '');
+      
+      
+
+    }
+
+  }
 
 });
+
