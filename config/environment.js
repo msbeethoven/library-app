@@ -17,6 +17,16 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: "AIzaSyD2uhcwEsmzkvcaVc37zwfjvSjGJqmjLeo",
+      authDomain: "library-app-emberjs.firebaseapp.com",
+      databaseURL: "https://library-app-emberjs.firebaseio.com",
+      projectId: "library-app-emberjs",
+      storageBucket: "",
+      messagingSenderId: "118427216559",
+      appId: "1:118427216559:web:621b6e9ffdda77c90d425a"
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

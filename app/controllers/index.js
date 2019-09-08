@@ -17,7 +17,8 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
 
-  response: '',
+  headerMessage: 'Coming Soon',
+  responseMessage: '',
   emailAddress: '',
 
   // isDisabled: empty('emailAddress'), 
@@ -40,9 +41,16 @@ export default Controller.extend({
   actions: {
 
     saveInvitation(){
+      const email = this.get('emailAddress');
+      
+      const newInvitation = this.store.createRecord('invitation', {
+        email: email
+      });
+
+      newInvitation.save();
       alert(`Saving : ${this.get('emailAddress')}`);
       //console.log(`Saved : ${this.get('emailAddress')}`);
-      this.set('responseMessage', `Thanks! Saved your address!: ${this.get('emailAddress')}`);
+      this.set('responseMessage', `Thank you! Saved your address!: ${this.get('emailAddress')}`);
       this.set('emailAddress', '');
       
       
