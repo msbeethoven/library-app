@@ -31,6 +31,7 @@
     "ember-cli-htmlbars": "^3.0.1",
     "ember-cli-htmlbars-inline-precompile": "^2.1.0",
     "ember-cli-inject-live-reload": "^1.8.2",
+    "ember-cli-qunit": "^4.3.2",
     "ember-cli-sass": "^10.0.1",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.1",
@@ -40,18 +41,16 @@
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^2.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
-    "ember-qunit": "^4.4.1",
     "ember-resolver": "^5.0.1",
     "ember-source": "~3.12.0",
     "ember-welcome-page": "^4.0.0",
     "emberfire": "^2.0.10",
     "eslint-plugin-ember": "^6.2.0",
-    "eslint-plugin-node": "^9.0.1",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.4",
     "sass": "^1.22.10"
   },
   "engines": {
-    "node": "8.* || >= 10.*"
+    "node": "6.* || 8.* || >= 10.*"
   }
 }

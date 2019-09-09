@@ -9,7 +9,7 @@ module.exports = function(environment) {
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
-        // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
+        // e.g. 'with-controller': true
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
@@ -22,7 +22,7 @@ module.exports = function(environment) {
       authDomain: "library-app-emberjs.firebaseapp.com",
       databaseURL: "https://library-app-emberjs.firebaseio.com",
       projectId: "library-app-emberjs",
-      storageBucket: "",
+      storageBucket: "gs://library-app-emberjs.appspot.com/",
       messagingSenderId: "118427216559",
       appId: "1:118427216559:web:621b6e9ffdda77c90d425a"
     },
